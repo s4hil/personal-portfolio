@@ -1,0 +1,34 @@
+.project-1 {
+    background:
+        linear-gradient(
+            to right,
+            rgba($primary-color,.6),
+            rgba($primary-color, .4)
+        ),
+    url(../imgs/1.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 150px;
+}
+.project-2 {
+    background:
+        linear-gradient(
+            to right,
+            rgba($primary-color,.6),
+            rgba($primary-color, .4)
+        ),
+    url(../imgs/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.project-3 {
+    background:
+        linear-gradient(
+            to right,
+            rgba($primary-color,.6),
+            rgba($primary-color, .4)
+        ),
+    url(../imgs/3.jpg);
+    background-size: cover;
+    background-position: center;
+}

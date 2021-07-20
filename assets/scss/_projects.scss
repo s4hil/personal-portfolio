@@ -1,0 +1,66 @@
+.main{
+    width: 100%;
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: max-content;
+            margin-top: 100px;
+
+
+            .project {
+                margin: 20px auto;
+                width: 80%;
+                height: 220px;
+                border: 1px solid white;
+                border-bottom: 5px solid $secondary-color;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                padding: 10px;
+
+                @include lg {
+                    width: 50%;
+                    height: 220px;
+                }
+
+                h4{
+                    font-size: 1.5rem;
+                    color: #fff;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                    float: left;
+                    @include easeTransition;
+                    
+                    &:hover {
+
+                        color: $secondary-color;
+                    }
+                }
+
+            }
+            
+        }
+    
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 5px;
+    z-index: -1;
+
+        .social-icons {
+            @include flexIt(column);
+            padding-left: 5px;
+        }
+        .copyrights {
+            transform: rotate(90deg);
+            margin-right: -20px;
+            
+        }
+}
