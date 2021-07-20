@@ -1,60 +1,24 @@
-
-.main-nav {
-    width: 100%;
-    
-    .nav-list {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        visibility: hidden;
-        transform: translateY(-100vh);
-        @include easeTransition;
-        @include flexIt(column);
-        list-style-type: none;
-        border: 1px solid red;
-        background: $primary-color;
-        opacity: .85;
-
-        li {
-            font-size: 2rem;
-            margin: .5rem;
-
-            & > a:hover{
-                color: $secondary-color;
-                border-bottom: 3px solid $secondary-color;
-            }
-        }
-    }
-    
-    .show-nav{
-        visibility: visible;
-        transform: translateY(0px);
-    }
-
-    .nav-btn{
-        @include flexIt(column);
-        width: 45px;
-        height: 40px;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        cursor: pointer;
-        font-size: 2rem;
-        z-index: 2;
-        border: 1px solid grey;
-        border-radius: 3px;
-    }
-}
-
 .main-content {
     width: 100%;
     height: 100vh;
     overflow: hidden !important;
-
+    background:
+        linear-gradient(
+            to right,
+            rgba($primary-color,1),
+            rgba($primary-color, .6)
+        ),
+    url(../imgs/zayn2.jpg);
+    background-position: right;
+    background-size: cover;
     @include flexIt(column);
 
     .bio {
         @include flexIt(column);
+    }
+
+    @include lg {
+        font-size: 2rem;
     }
 }
 
@@ -84,6 +48,30 @@
 .bio {
     span{
         color: $secondary-color;
-        text-decoration: underline;
+    }
+    h2 {
+        border-bottom: 3px solid $secondary-color;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        padding-right: 10px;
+        color: #fff;
+    }
+
+    .tags-container {
+        @include flexIt(row);
+    }
+
+    .tags {
+        animation: typing 4s steps(28);
+        white-space: nowrap;
+        overflow: hidden;
+        margin-right: 3px;
+        color: #fff;
+    }
+    .caret {
+        width: 3px;
+        background-color: #fff;
+        animation: caret .4s infinite;
     }
 }
+
